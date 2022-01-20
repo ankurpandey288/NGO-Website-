@@ -1,0 +1,552 @@
+﻿
+@{
+    ViewBag.Title = "MembershipForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    p {
+        margin: 8px 0 6px !important;
+    }
+    .register {
+        background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+        margin-top: -6%;
+        padding: 3%;
+    }
+    .btn.btn-black {
+        background: #000000;
+        border-color: #000000;
+        color: #fff;
+        margin-left: 106px;
+    }
+    .register-left {
+        text-align: center;
+        color: #fff;
+        margin-top: 4%;
+    }
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    /*border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;*/
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 80%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+</style>
+
+<section class="wow fadeIn  padding-35px-tb page-title-small top-space" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-8 col-md-6 text-center text-md-left">
+               
+            </div>
+            <div class="col-xl-4 col-md-6 breadcrumb alt-font text-small justify-content-center justify-content-md-end sm-margin-10px-top">
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wow fadeIn" id="start-your-project" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-12 col-md-12 margin-eight-bottom md-margin-40px-bottom sm-margin-30px-bottom text-center last-paragraph-no-margin">
+                <h5 class="alt-font font-weight-700 text-extra-dark-gray text-uppercase" style="font-family: 'Roboto Slab', serif;margin-top: 34px;"><u>International Human Rights Organization</u></h5>
+                <p style="color:black;margin-top: -23px;">( In Co-operation With & Affliated To International Bar Association )</p>
+                <p style="color:black;margin-top: -23px;"> F-301, Ashiana Building, Lane 7, Block F Pandav Nagar Rd, New Delhi, Delhi 110091,Ph:9311061107 </p>
+                <p style="color:black;margin-top: -23px;">Email: info@ihroworld.org  Website:www.Ihroworld.org</p>
+                @*<p>Application Form for-Volunteers<input type="checkbox" value=""> Membership <input type="checkbox" value="">Institutional Membership<input type="checkbox" value="">Corporate membership <input type="checkbox" value=""></p>*@
+            </div>
+        </div>
+        <div class="container register">
+            
+            <div class="row">
+                <div class="col-md-2 register-left">
+                    <img src="~/Images/join.png" alt="" />
+                    <h4>IHRO</h4>
+                    <h6>Application Form</h6>
+                </div>
+                <div class="col-md-10 register-right">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="register-heading">
+                                @*<h6> Application Form For </h6>*@
+                            </div>
+                            <div class="row register-form">
+                                <div class="col-md-3" style="text-align: -webkit-center !important;font-size:12px !important">
+                                    <span>Volunteer</span>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <input class="required-error" type="radio" name="RadioButton"  id="rdbVol"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="text-align: -webkit-center !important;font-size:12px !important">
+                                    <span>Membership</span>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <input type="radio" name="RadioButton" id="rdbMemb" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="text-align: -webkit-center !important;font-size:12px !important">
+                                    <span>Institutional Membership</span>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <input type="radio" name="RadioButton" id="rdbInstiMemb" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="text-align: -webkit-center !important;font-size:12px !important">
+                                    <span>Corporate Membership</span>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <input type="radio" name="RadioButton" id="rdbCorpMemb" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="margin-left: 20px !important;"><b>PERSONAL DETAILS</b></p>
+                                <div class="col-12 col-lg-12 col-md-6 md-margin-30px-bottom wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="counter-feature-box-1 w-100 border-all padding-5px-all">
+                                        <div class="counter-box bg-white d-flex justify-content-center flex-column h-100">
+                                            <div class="row register-form" style="margin-top: 0% !important;">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" id="txtName" placeholder="Name *">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="ddlGender">
+                                                            <option value="0" class="hidden" selected disabled>Select Gender</option>
+                                                            <option value="1">Male</option>
+                                                            <option value="2">Female</option>
+                                                            <option value="3">Other</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" id="txtphone" class="form-control" placeholder="Your Phone *" value="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" id="txtfathername" placeholder="Father's Name *">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="date" class="form-control" placeholder="DOB*" id="txtdob" value="" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" placeholder="Your Email *" id="txtemail" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="margin-left: 20px !important;"><b>ADDRESS</b></p>
+                                <div class="col-12 col-lg-12 col-md-6 text-center md-margin-30px-bottom wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="counter-feature-box-1 w-100 border-all padding-5px-all">
+                                        <div class="counter-box bg-white d-flex justify-content-center flex-column h-100">
+                                            <div class="row register-form" style="margin-top: 0% !important;">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" id="txtadd" placeholder="Address *">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" minlength="10" maxlength="10" name="Phone" id="txtEmpPhone" class="form-control" placeholder="State *" value="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" id="txtstate" placeholder="City *">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" placeholder="ZIP *" id="txtem" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="margin-left: 20px !important;"><b>ATTACHED DOCUMENT'S COPIES:</b></p>
+                                <div class="col-12 col-lg-12 col-md-6 md-margin-30px-bottom wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="counter-feature-box-1 w-100 border-all padding-5px-all" style="height: 310px !important;">
+                                        <div class="counter-box bg-white d-flex justify-content-center flex-column h-100">
+                                            <div class="row register-form" style="margin-top: 0% !important;">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Passport</label>
+                                                            @*<div class="form-check">
+                                                                <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+                                                            </div>*@
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Electricity Bill</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkElecBill" />
+        </div>*@
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Other Govt. Doc</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkGovtDoc" />
+        </div>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Adhar Card</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+        </div>*@
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Pan Card</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+        </div>*@
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Photograph</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+        </div>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Driver's Licence</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+        </div>*@
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Character Certificate</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+        </div>*@
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">Singnature</label>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" required="" />
+                                                            <label class="custom-file-label" for="validationCustomFile">Choose File...</label>
+                                                            <div class="invalid-feedback">Custom File FeedBack</div>
+                                                        </div>
+                                                        @*<div class="form-check">
+            <input style="margin-top: -24px;" type="checkbox" class="form-check-input" checked="" id="cbkPass" />
+        </div>*@
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="margin-left: 20px !important;"><b>MEMBERSHIP:</b></p>
+                                <div class="col-12 col-lg-12 col-md-6 md-margin-30px-bottom wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="counter-feature-box-1 w-100 border-all padding-5px-all">
+                                        <div class="counter-box bg-white d-flex justify-content-center flex-column h-100">
+                                            <div class="row register-form" style="margin-top: 2% !important;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">DD Of Rs.2500/-Active Membership For 5 years</label>
+                                                        <div class="form-check">
+                                                            <input style="margin-top: -24px;margin-left: -3.25rem;" type="checkbox" class="form-check-input memb" checked="" id="cbkPass" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center;">DD Of Rs.25000/-(Institutional Membership College/Universities)</label>
+                                                        <div class="form-check">
+                                                            <input style="margin-top: -24px;margin-left: -3.25rem;" type="checkbox" class="form-check-input memb" checked="" id="cbkPass" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">DD Of Rs.5000/-Life Membership</label>
+                                                        <div class="form-check">
+                                                            <input style="margin-top: -24px;margin-left: -3.25rem;" type="checkbox" class="form-check-input memb" checked="" id="cbkPass" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">DD Of Rs.30,000/-Corporates Membership</label>
+                                                        <div class="form-check">
+                                                            <input style="margin-top: -24px;margin-left: -3.25rem;" type="checkbox" class="form-check-input memb" checked="" id="cbkPass" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="margin-left: 20px !important;"><b>OVERSEAS MEMBERSHIP:</b></p>
+                                <div class="col-12 col-lg-12 col-md-6 md-margin-30px-bottom wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="counter-feature-box-1 w-100 border-all padding-5px-all">
+                                        <div class="counter-box bg-white d-flex justify-content-center flex-column h-100">
+                                            <div class="row register-form" style="margin-top: 2% !important;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-form-label" style="text-align:center">USD 1000 Active Membership For 5 Years</label>
+                                                        <div class="form-check">
+                                                            <input style="margin-top: -24px;margin-left: -3.25rem;" type="checkbox" class="form-check-input" checked="" id="cbkMebfor5" />
+                                                        </div>
+                                                        <br />
+                                                        <span>
+                                                            <b>
+                                                                IN AXIS BANK ACCOUNT NO.910010047618524,<br />IFSC:UTIB0000894
+                                                                in the name of INTERNATIONAL HUMAN RIGHTS ORGANIZATION
+                                                                NOTE:ONLY D.D CHEQUES AND ONLINE PAYMMENTS.NO CASH ACCEPTABLE
+                                                            </b>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<p style="margin-left: 20px !important;"><b>Terms & Conditions</b></p>
+                                <div class="col-12 col-lg-12 col-md-6 md-margin-30px-bottom wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                    <div class="counter-feature-box-1 w-100 border-all padding-5px-all" style="height: 510px !important;">
+                                        <div class="counter-box bg-white d-flex justify-content-center flex-column h-100">
+                                            <div class="row register-form" style="margin-top: 2% !important;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            The Officers of IHRO are working on voluntary basis and no payment is given to them.
+                                                            Enrolment is non-transferable and the payment (Donation) is made, it will not be
+                                                            refundable.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            Any kind of misbehavior / misconduct may be result in rejection of Enrolment. All
+                                                            disputers subject to jurisdiction of Delhi only.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            IHRO will not be responsible for any misuse of ID Card issued to the officers during the
+                                                            course of their Membership with IHRO.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            On expiry, the ID Cards / Certificate must be submitted to the Admin office within 30
+                                                            days. After expiry renewal is a must for regular Membership.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            In case of change of address / mobile no Officers should inform the same to the National
+                                                            Admin office.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            In case of loss the identity Card / Certificate inform the Head Office in writing along with
+                                                            the F.I.R. immediately.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            All IHRO officers should contact their respective Area / Distt / State &amp; National units
+                                                            office once in a month.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            Strict action will be taken against the Officers, if found guilty floating the rules and
+                                                            regulation of IHRO.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            If you have any doubt, question or problem, please contact IHRO Admin office. All right
+                                                            reserved to IHRO.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            Applicant can use photocopy of the Application form which will be duly Acknowledge by
+                                                            the National Admin Office one received duly fill in.
+                                                        </b>   <br />
+                                                        <p><b>Note :</b>All Documents Including Joining Letter, ID-Card will be dispatched to the candidate after 30 days from the date of joining thought proper channel after verification.</p>
+                                                        <p> <b style="color:red">Important Note :</b> Please do not give any donation to Member or Officer directly; Donate to our above mentioned account only.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>*@
+                                <div class="col-md-6">
+
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#contact-form" class="wow fadeInDown popup-with-form"> <button style="" class="btnRegister" id="btnSubmit"> I AGREE  <i class="fa fa-check"></i> </button></a>
+                                    <button style="" class="btnRegister" onclick="" id="btnCancel">DISAGREE</button>
+                                    <!-- start form -->
+                                    <form id="contact-form" action="javascript:void(0)" method="post" class="white-popup-block mfp-hide col-lg-6 p-0 mx-auto">
+                                        <div class="padding-fifteen-all bg-white border-radius-6 lg-padding-seven-all" style="padding: 5% !important;">
+                                            <div class="text-extra-dark-gray alt-font text-large font-weight-600 margin-30px-bottom">Terms & Conditions</div>
+                                            <div>
+                                                <button id="popClose" title="Close (Esc)" type="button" class="mfp-close">×</button>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            The Officers of IHRO are working on voluntary basis and no payment is given to them.
+                                                            Enrolment is non-transferable and the payment (Donation) is made, it will not be
+                                                            refundable.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            Any kind of misbehavior / misconduct may be result in rejection of Enrolment. All
+                                                            disputers subject to jurisdiction of Delhi only.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            IHRO will not be responsible for any misuse of ID Card issued to the officers during the
+                                                            course of their Membership with IHRO.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            On expiry, the ID Cards / Certificate must be submitted to the Admin office within 30
+                                                            days. After expiry renewal is a must for regular Membership.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            In case of change of address / mobile no Officers should inform the same to the National
+                                                            Admin office.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            In case of loss the identity Card / Certificate inform the Head Office in writing along with
+                                                            the F.I.R. immediately.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            All IHRO officers should contact their respective Area / Distt / State &amp; National units
+                                                            office once in a month.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            Strict action will be taken against the Officers, if found guilty floating the rules and
+                                                            regulation of IHRO.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            If you have any doubt, question or problem, please contact IHRO Admin office. All right
+                                                            reserved to IHRO.
+                                                        </b>   <br />
+                                                        <i class="fa fa-check"></i>&nbsp; <b style="font-size: 10px;">
+                                                            Applicant can use photocopy of the Application form which will be duly Acknowledge by
+                                                            the National Admin Office one received duly fill in.
+                                                        </b>   <br />
+                                                        <p><b>Note :</b>All Documents Including Joining Letter, ID-Card will be dispatched to the candidate after 30 days from the date of joining thought proper channel after verification.</p>
+                                                        <p> <b style="color:red">Important Note :</b> Please do not give any donation to Member or Officer directly; Donate to our above mentioned account only.</p>
+                                                    </div>
+                                                </div>
+                                                <button id="btnSubmit" onclick="Submit()" type="submit" class="btn btn-small border-radius-4 btn-black">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- end form -->
+                                    @*<input type="submit" class="btnRegister" value="Register" />*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/Script/jquery-3.3.1.min.js"></script>
+<script src="~/Script/jquery.min.js"></script>
+<script src="~/Script/View/MembershipForm.js"></script>
